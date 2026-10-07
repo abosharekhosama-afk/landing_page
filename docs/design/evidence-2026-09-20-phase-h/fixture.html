@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Phase H Sites card measurement fixture</title>
+  <link rel="stylesheet" href="../../../cpanel/src/styles/dashboard-shell.css" />
+  <style>
+    html, body { margin: 0; background: #f0f4f7; font-family: Helvetica, Arial, sans-serif; }
+    .measure-wrap { width: 246px; margin: 24px; }
+  </style>
+</head>
+<body class="admin-studio-shell admin-sites-workspace">
+  <div class="measure-wrap">
+    <article class="sites-card" id="measure-card">
+      <div class="sites-card-thumb">
+        <span class="sites-card-thumb-mark" aria-hidden="true">IC</span>
+        <div class="sites-card-actions" style="opacity:0"><button class="sites-card-edit" type="button">Edit Site</button></div>
+      </div>
+      <div class="sites-card-footer">
+        <strong class="sites-card-name">iCare Beauty</strong>
+        <span class="sites-card-slug">icare</span>
+        <span class="sites-status sites-status-active">Active</span>
+      </div>
+    </article>
+  </div>
+  <script>
+    const card = document.getElementById("measure-card");
+    const thumb = card.querySelector(".sites-card-thumb");
+    const footer = card.querySelector(".sites-card-footer");
+    const out = {
+      widthPx: card.getBoundingClientRect().width,
+      heightPx: card.getBoundingClientRect().height,
+      thumbHeightPx: thumb.getBoundingClientRect().height,
+      footerHeightPx: footer.getBoundingClientRect().height,
+      referencePx: 211.8,
+    };
+    out.deltaPx = Number((out.heightPx - out.referencePx).toFixed(2));
+    document.title = `Sites card ${out.heightPx.toFixed(2)}px (Δ ${out.deltaPx})`;
+    console.log(JSON.stringify(out, null, 2));
+  </script>
+</body>
+</html>

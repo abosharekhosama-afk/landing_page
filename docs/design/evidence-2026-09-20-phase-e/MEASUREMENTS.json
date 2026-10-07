@@ -1,0 +1,62 @@
+{
+    "staffTable":  {
+                       "actionsSticky":  true,
+                       "minWidth":  "900px"
+                   },
+    "cssRuleChecks":  {
+                          "contactsMaxHeight":  true,
+                          "contactsStickyFirst":  true,
+                          "inbox390":  true,
+                          "detailChrome":  true,
+                          "staffMinWidth":  true,
+                          "formsChrome":  true,
+                          "inbox820":  true,
+                          "reviewsMinWidth":  true,
+                          "contactsMinWidth":  true
+                      },
+    "reviewsTable":  {
+                         "actionsSticky":  true,
+                         "cellClip":  true,
+                         "minWidth":  "960px"
+                     },
+    "contactsTable":  {
+                          "minWidth":  "1280px",
+                          "maxHeight":  "calc(100vh - 420px)",
+                          "cellClip":  true,
+                          "actionsSticky":  "shared .admin-data-table-actions inset-inline-end:0",
+                          "firstColSticky":  true,
+                          "overflow":  "auto"
+                      },
+    "viewports":  [
+                      1440,
+                      1280,
+                      768,
+                      390
+                  ],
+    "method":  "Source CSS rule verification against dashboard-shell.css tenant CRM overrides (fixture-equivalent DevTools checklist); live authenticated EN/AR CDP = NOT_TESTED",
+    "forms":  {
+                  "planUnavailable":  true,
+                  "chromeTokens":  true,
+                  "honestEmpty":  true
+              },
+    "inbox":  {
+                  "stackAt":  "820px",
+                  "chromeTokens":  true,
+                  "overflowGuardAt":  "390px"
+              },
+    "enAr":  "dir=ltr/rtl preserved on page roots; Actions sticky uses logical inset-inline-end",
+    "measuredAt":  "2026-09-20",
+    "contactDetail":  {
+                          "nestedTables":  "admin-data-table*",
+                          "cardRadius":  "var(--dashboard-card-radius)"
+                      },
+    "businessLogic":  "unchanged — fidelity class/CSS only",
+    "routesCovered":  [
+                          "contacts",
+                          "contact-detail",
+                          "inbox",
+                          "reviews",
+                          "staff",
+                          "forms"
+                      ]
+}

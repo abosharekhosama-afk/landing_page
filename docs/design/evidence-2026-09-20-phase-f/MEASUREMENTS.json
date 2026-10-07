@@ -1,0 +1,59 @@
+{
+  "measuredAt": "2026-09-20",
+  "method": "Source CSS rule verification against dashboard-shell.css tenant Phase F overrides (fixture-equivalent DevTools checklist); live authenticated EN/AR CDP = NOT_TESTED",
+  "viewports": [1440, 1280, 820, 390],
+  "enAr": "dir=ltr/rtl preserved on tenant-analytics-page and tenant-marketing-page roots; Actions sticky uses logical inset-inline-end",
+  "businessLogic": "unchanged — fidelity class/CSS only; no fake metrics",
+  "routesCovered": [
+    "banners",
+    "announcements",
+    "splash-ads",
+    "sms",
+    "website-texts",
+    "website-media",
+    "homepage-offers",
+    "seo",
+    "analytics-highlights",
+    "analytics-realtime",
+    "analytics-traffic",
+    "analytics-behavior",
+    "analytics-marketing",
+    "analytics-session-recordings",
+    "analytics-insights",
+    "analytics-benchmarks",
+    "analytics-reports"
+  ],
+  "marketingTables": {
+    "adminDataTable": true,
+    "actionsSticky": true,
+    "cellClip": true,
+    "minWidth": "720px"
+  },
+  "analytics": {
+    "metricChrome": true,
+    "panelChrome": true,
+    "emptyChartHonesty": true,
+    "nestedAdminDataTable": true,
+    "sessionRecordingsDecorative": true
+  },
+  "seo": {
+    "settingsChrome": true,
+    "previewChrome": true,
+    "searchConsoleNotConnected": true,
+    "saveApiPreserved": true
+  },
+  "homepageOffersMedia": {
+    "cardChrome": true,
+    "handlersUnchanged": true
+  },
+  "cssRuleChecks": {
+    "phaseFMarker": true,
+    "panelCardTable": true,
+    "analyticsMetricRadius": true,
+    "marketingSeoSettings": true,
+    "homeContentCards": true,
+    "websiteMediaCards": true,
+    "overflow820": true,
+    "overflow390": true
+  }
+}

@@ -1,0 +1,3 @@
+export function isAnnouncementActive(a, now=new Date()) { if(!a?.is_active) return false; const t=now.getTime(); return (!a.start_date||new Date(a.start_date).getTime()<=t)&&(!a.end_date||new Date(a.end_date).getTime()>=t); }
+export function announcementMatchesPage(a,pageKey="/") { const placement=a.placement||"ALL_PAGES"; if(placement==="ALL_PAGES") return true; if(placement==="HOMEPAGE") return pageKey==="/"||pageKey==="home"; return Array.isArray(a.selected_pages)&&a.selected_pages.includes(pageKey); }
+export function getVisibleAnnouncements(items,pageKey,now=new Date()){return items.filter(a=>isAnnouncementActive(a,now)&&announcementMatchesPage(a,pageKey)).sort((a,b)=>Number(b.priority||0)-Number(a.priority||0));}

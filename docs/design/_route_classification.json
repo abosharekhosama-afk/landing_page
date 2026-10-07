@@ -1,0 +1,1525 @@
+{
+  "summary": {
+    "totalInventoryRows": 170,
+    "uniqueAdminPaths": 166,
+    "classificationCounts": {
+      "UNIQUE_REAL_PAGE": 52,
+      "PLACEHOLDER_SOON": 65,
+      "NESTED_DETAIL_ROUTE": 48,
+      "DUPLICATE_INVENTORY_ROW": 1,
+      "NON_PAGE_ROUTE": 2,
+      "ROUTE_ALIAS": 2
+    },
+    "uniqueRealPages": 52,
+    "uniqueRealByReference": {
+      "dashboard": 50,
+      "studio": 1,
+      "editor": 1
+    },
+    "nestedDetailRoutes": 48,
+    "placeholders": 65,
+    "uiPrimaryImplementable": 51,
+    "uiNestedDerivatives": 48,
+    "uniqueRealKeys": [
+      "admin",
+      "admin-activity-log",
+      "admin-analytics-highlights",
+      "admin-announcements",
+      "admin-automations",
+      "admin-banners",
+      "admin-bookings-calendar",
+      "admin-brands",
+      "admin-categories",
+      "admin-community",
+      "admin-customers",
+      "admin-delivery",
+      "admin-developer-advanced-log-tools",
+      "admin-developer-monitoring",
+      "admin-developer-secrets-manager",
+      "admin-developer-site-logs",
+      "admin-developer-triggered-emails",
+      "admin-dropshipping",
+      "admin-forms",
+      "admin-homepage-offers",
+      "admin-inbox",
+      "admin-inventory",
+      "admin-invoices",
+      "admin-legal-information",
+      "admin-loyalty",
+      "admin-meetings",
+      "admin-orders",
+      "admin-pipelines",
+      "admin-platform-companies",
+      "admin-platform-domains",
+      "admin-platform-overview",
+      "admin-policies",
+      "admin-product-bundles",
+      "admin-product-settings",
+      "admin-products",
+      "admin-products-trash",
+      "admin-reports",
+      "admin-reviews",
+      "admin-security",
+      "admin-settings",
+      "admin-site-editor",
+      "admin-sites",
+      "admin-sms",
+      "admin-splash-ads",
+      "admin-staff",
+      "admin-store-locator",
+      "admin-unit-creator",
+      "admin-vlogs",
+      "admin-website-content-cms",
+      "admin-website-content-multilingual",
+      "admin-website-media",
+      "admin-website-texts"
+    ],
+    "nestedKeys": [
+      "admin-analytics-behavior",
+      "admin-analytics-benchmarks",
+      "admin-analytics-insights",
+      "admin-analytics-marketing",
+      "admin-analytics-realtime",
+      "admin-analytics-reports",
+      "admin-analytics-session-recordings",
+      "admin-analytics-traffic",
+      "admin-bookings-analytics",
+      "admin-bookings-list",
+      "admin-bookings-work-schedule",
+      "admin-brands-new",
+      "admin-categories-new",
+      "admin-customers-detail",
+      "admin-dropshipping-earnings",
+      "admin-dropshipping-marketers",
+      "admin-dropshipping-orders",
+      "admin-dropshipping-products",
+      "admin-dropshipping-reports",
+      "admin-dropshipping-settings",
+      "admin-dropshipping-withdrawals",
+      "admin-products-new",
+      "admin-settings-bookings",
+      "admin-settings-bookings-add-ons",
+      "admin-settings-bookings-client-flow",
+      "admin-settings-bookings-default-hours",
+      "admin-settings-bookings-forms",
+      "admin-settings-bookings-integrations",
+      "admin-settings-bookings-notifications-received",
+      "admin-settings-bookings-notifications-sent",
+      "admin-settings-bookings-resources",
+      "admin-settings-bookings-staff",
+      "admin-settings-bookings-video-conferencing",
+      "admin-settings-checkout",
+      "admin-settings-checkout-emails",
+      "admin-settings-getting-paid",
+      "admin-settings-getting-paid-automations",
+      "admin-settings-getting-paid-general",
+      "admin-settings-getting-paid-invoices",
+      "admin-settings-getting-paid-pay-links",
+      "admin-settings-getting-paid-price-quotes",
+      "admin-settings-receipts",
+      "admin-settings-receipts-automations",
+      "admin-settings-shipping",
+      "admin-settings-tax",
+      "admin-staff-new",
+      "admin-store-locator-new",
+      "admin-vlogs-new"
+    ],
+    "aliasKeys": [
+      "admin-products-edit",
+      "admin-employees"
+    ],
+    "duplicateKeys": [
+      {
+        "key": "admin-website-media",
+        "of": "admin-website-media"
+      }
+    ],
+    "families": {
+      "Dashboard shell": {
+        "primary": [
+          "admin",
+          "admin-platform-overview"
+        ],
+        "nested": [],
+        "notes": "shell already largely done"
+      },
+      "Platform administration": {
+        "primary": [
+          "admin-platform-companies",
+          "admin-platform-domains"
+        ],
+        "nested": [],
+        "notes": "companies+memberships mostly done"
+      },
+      "Data tables (catalog/sales/CRM core)": {
+        "primary": [
+          "admin-products",
+          "admin-product-bundles",
+          "admin-inventory",
+          "admin-categories",
+          "admin-brands",
+          "admin-products-trash",
+          "admin-orders",
+          "admin-delivery",
+          "admin-customers",
+          "admin-reviews",
+          "admin-inbox",
+          "admin-invoices",
+          "admin-activity-log"
+        ],
+        "nested": [
+          "admin-products-new",
+          "admin-categories-new",
+          "admin-brands-new",
+          "admin-customers-detail"
+        ],
+        "notes": "shared bilingual table system"
+      },
+      "Discount managers (nav honesty + table UI)": {
+        "primary": [
+          "admin-tenant-placeholder-catalog-discounts-coupons",
+          "admin-tenant-placeholder-catalog-discounts-automatic"
+        ],
+        "nested": [],
+        "notes": "reclassify to existing; reuse table family"
+      },
+      "Forms / settings panels": {
+        "primary": [
+          "admin-settings",
+          "admin-product-settings",
+          "admin-security",
+          "admin-policies",
+          "admin-legal-information",
+          "admin-staff"
+        ],
+        "nested": [
+          "admin-staff-new",
+          "admin-settings-getting-paid",
+          "admin-settings-getting-paid-general",
+          "admin-settings-getting-paid-invoices",
+          "admin-settings-getting-paid-price-quotes",
+          "admin-settings-getting-paid-pay-links",
+          "admin-settings-getting-paid-automations",
+          "admin-settings-receipts",
+          "admin-settings-receipts-automations",
+          "admin-settings-tax",
+          "admin-settings-checkout",
+          "admin-settings-checkout-emails",
+          "admin-settings-shipping",
+          "admin-settings-bookings",
+          "admin-settings-bookings-default-hours",
+          "admin-settings-bookings-add-ons",
+          "admin-settings-bookings-staff",
+          "admin-settings-bookings-resources",
+          "admin-settings-bookings-notifications-sent",
+          "admin-settings-bookings-notifications-received",
+          "admin-settings-bookings-client-flow",
+          "admin-settings-bookings-forms",
+          "admin-settings-bookings-video-conferencing",
+          "admin-settings-bookings-integrations"
+        ],
+        "notes": "form/settings chrome"
+      },
+      "Marketing / merchandising CRUD": {
+        "primary": [
+          "admin-banners",
+          "admin-announcements",
+          "admin-splash-ads",
+          "admin-sms",
+          "admin-homepage-offers",
+          "admin-website-texts",
+          "admin-website-media",
+          "admin-store-locator",
+          "admin-vlogs"
+        ],
+        "nested": [
+          "admin-vlogs-new",
+          "admin-store-locator-new"
+        ],
+        "notes": "list+form pattern"
+      },
+      "SEO (nav honesty + settings form)": {
+        "primary": [
+          "admin-tenant-placeholder-marketing-seo-geo"
+        ],
+        "nested": [],
+        "notes": "real SeoPage"
+      },
+      "Analytics": {
+        "primary": [
+          "admin-analytics-highlights"
+        ],
+        "nested": [
+          "admin-analytics-realtime",
+          "admin-analytics-traffic",
+          "admin-analytics-behavior",
+          "admin-analytics-marketing",
+          "admin-analytics-session-recordings",
+          "admin-analytics-insights",
+          "admin-analytics-benchmarks",
+          "admin-analytics-reports"
+        ],
+        "notes": "shared analytics chrome; some shells honest"
+      },
+      "CRM": {
+        "primary": [
+          "admin-forms",
+          "admin-meetings",
+          "admin-pipelines",
+          "admin-community",
+          "admin-loyalty"
+        ],
+        "nested": [],
+        "notes": "thin shells — UI only if kept"
+      },
+      "Bookings": {
+        "primary": [
+          "admin-bookings-calendar"
+        ],
+        "nested": [
+          "admin-bookings-list",
+          "admin-bookings-work-schedule",
+          "admin-bookings-analytics"
+        ],
+        "notes": "calendar + list variants"
+      },
+      "Studio Sites cards": {
+        "primary": [
+          "admin-sites"
+        ],
+        "nested": [],
+        "notes": "mostly done; polish only"
+      },
+      "Website content thin / CMS": {
+        "primary": [
+          "admin-website-content-cms",
+          "admin-website-content-multilingual",
+          "admin-automations"
+        ],
+        "nested": [],
+        "notes": "PARTIAL shells"
+      },
+      "Developer / ops / IMKAN-specific": {
+        "primary": [
+          "admin-developer-site-logs",
+          "admin-developer-advanced-log-tools",
+          "admin-developer-monitoring",
+          "admin-developer-secrets-manager",
+          "admin-developer-triggered-emails",
+          "admin-unit-creator",
+          "admin-dropshipping"
+        ],
+        "nested": [
+          "admin-dropshipping-marketers",
+          "admin-dropshipping-products",
+          "admin-dropshipping-orders",
+          "admin-dropshipping-earnings",
+          "admin-dropshipping-withdrawals",
+          "admin-dropshipping-reports",
+          "admin-dropshipping-settings"
+        ],
+        "notes": "lower priority polish"
+      },
+      "Modals_drawers_shared": {
+        "primary": [],
+        "nested": [],
+        "notes": "cross-cutting component work counted in Foundation + table family"
+      }
+    }
+  },
+  "rows": [
+    {
+      "pageKey": "admin-platform-overview",
+      "path": "/admin/platform/overview",
+      "name": "Overview",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-companies",
+      "path": "/admin/platform/companies",
+      "name": "Companies",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-domains",
+      "path": "/admin/platform/domains",
+      "name": "Domains",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-sites",
+      "path": "/admin/platform/coming-soon/sites",
+      "name": "Sites",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-mobile-apps",
+      "path": "/admin/platform/coming-soon/mobile-apps",
+      "name": "Mobile Apps",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-templates-studio-editor",
+      "path": "/admin/platform/coming-soon/templates/studio-editor",
+      "name": "Studio Editor Templates",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-templates-wix-editor",
+      "path": "/admin/platform/coming-soon/templates/wix-editor",
+      "name": "Website Editor Templates",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-templates-yours",
+      "path": "/admin/platform/coming-soon/templates/yours",
+      "name": "Your Templates",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-custom-apps",
+      "path": "/admin/platform/coming-soon/custom-apps",
+      "name": "Custom Apps",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-client-experience-feedback",
+      "path": "/admin/platform/coming-soon/client-experience/feedback",
+      "name": "Client Feedback",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-client-experience-kits",
+      "path": "/admin/platform/coming-soon/client-experience/kits",
+      "name": "Client Kits",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-client-experience-reports",
+      "path": "/admin/platform/coming-soon/client-experience/reports",
+      "name": "Client Reports",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-client-experience-crm-billing",
+      "path": "/admin/platform/coming-soon/client-experience/crm-billing",
+      "name": "CRM & Client Billing",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-customer-care-tickets",
+      "path": "/admin/platform/coming-soon/customer-care-tickets",
+      "name": "Customer Care Tickets",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-team",
+      "path": "/admin/platform/coming-soon/team",
+      "name": "Team",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-settings-workspace",
+      "path": "/admin/platform/coming-soon/settings/workspace",
+      "name": "Workspace Settings",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-settings-business-info",
+      "path": "/admin/platform/coming-soon/settings/business-info",
+      "name": "Business Info",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-settings-notifications",
+      "path": "/admin/platform/coming-soon/settings/notifications",
+      "name": "Notifications Preferences",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-settings-webhooks",
+      "path": "/admin/platform/coming-soon/settings/webhooks",
+      "name": "Webhooks",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin",
+      "path": null,
+      "name": "Home",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-products",
+      "path": "/admin/products",
+      "name": "Products",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-product-bundles",
+      "path": "/admin/product-bundles",
+      "name": "Bundles",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-inventory",
+      "path": "/admin/inventory",
+      "name": "Inventory",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-categories",
+      "path": "/admin/categories",
+      "name": "Categories",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-brands",
+      "path": "/admin/brands",
+      "name": "Brands",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-product-settings",
+      "path": "/admin/product-settings",
+      "name": "Product Settings",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-products-trash",
+      "path": "/admin/products/trash",
+      "name": "Trash",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-catalog-booking-services",
+      "path": "/admin/coming-soon/catalog/booking-services",
+      "name": "Booking Services",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-catalog-gift-cards",
+      "path": "/admin/coming-soon/catalog/gift-cards",
+      "name": "Gift Cards",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-catalog-discounts-coupons",
+      "path": "/admin/coming-soon/catalog/discounts/coupons",
+      "name": "Coupons",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-catalog-discounts-automatic",
+      "path": "/admin/coming-soon/catalog/discounts/automatic",
+      "name": "Automatic Discounts",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-catalog-booking-channels-integrations",
+      "path": "/admin/coming-soon/catalog/booking-channels/integrations",
+      "name": "Booking Integrations",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-catalog-booking-channels-links",
+      "path": "/admin/coming-soon/catalog/booking-channels/links",
+      "name": "Shareable Links",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-orders",
+      "path": "/admin/orders",
+      "name": "Orders",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-delivery",
+      "path": "/admin/delivery",
+      "name": "Delivery",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-sales-subscriptions",
+      "path": "/admin/coming-soon/sales/subscriptions",
+      "name": "Subscriptions",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-sales-gift-card-sales",
+      "path": "/admin/coming-soon/sales/gift-card-sales",
+      "name": "Gift Card Sales",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-sales-payments-all",
+      "path": "/admin/coming-soon/sales/payments/all",
+      "name": "All Payments",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-sales-payments-receipts",
+      "path": "/admin/coming-soon/sales/payments/receipts",
+      "name": "Receipts",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-sales-analytics-overview",
+      "path": "/admin/coming-soon/sales/analytics/overview",
+      "name": "Sales Overview",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-sales-analytics-subscriptions",
+      "path": "/admin/coming-soon/sales/analytics/subscriptions",
+      "name": "Subscriptions",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-sales-abandoned-carts",
+      "path": "/admin/coming-soon/sales/abandoned-carts",
+      "name": "Abandoned Carts",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-bookings-calendar",
+      "path": "/admin/bookings/calendar",
+      "name": "Calendar",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-bookings-list",
+      "path": "/admin/bookings/list",
+      "name": "Booking List",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-bookings-work-schedule",
+      "path": "/admin/bookings/work-schedule",
+      "name": "Work Schedule",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-bookings-analytics",
+      "path": "/admin/bookings/analytics",
+      "name": "Bookings Analytics",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-customers",
+      "path": "/admin/customers",
+      "name": "Contacts",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-reviews",
+      "path": "/admin/reviews",
+      "name": "Reviews",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-inbox",
+      "path": "/admin/inbox",
+      "name": "Inbox",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-forms",
+      "path": "/admin/forms",
+      "name": "Forms & Submissions",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-meetings",
+      "path": "/admin/meetings",
+      "name": "Meetings",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-pipelines",
+      "path": "/admin/pipelines",
+      "name": "Pipelines",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-community",
+      "path": "/admin/community",
+      "name": "Community",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-loyalty",
+      "path": "/admin/loyalty",
+      "name": "Loyalty Program",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-staff",
+      "path": "/admin/staff",
+      "name": "Employees",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-banners",
+      "path": "/admin/banners",
+      "name": "Banners",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-announcements",
+      "path": "/admin/announcements",
+      "name": "Announcements",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-splash-ads",
+      "path": "/admin/splash-ads",
+      "name": "Splash Ads",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-sms",
+      "path": "/admin/sms",
+      "name": "SMS",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-marketing-seo-geo",
+      "path": "/admin/coming-soon/marketing/seo-geo",
+      "name": "SEO & GEO",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-marketing-google-ads",
+      "path": "/admin/coming-soon/marketing/google-ads",
+      "name": "Google Ads",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-marketing-meta-ads",
+      "path": "/admin/coming-soon/marketing/meta-ads",
+      "name": "Facebook & Instagram Ads",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-marketing-email",
+      "path": "/admin/coming-soon/marketing/email",
+      "name": "Email Marketing",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-marketing-social",
+      "path": "/admin/coming-soon/marketing/social",
+      "name": "Social Media Marketing",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-marketing-referrals",
+      "path": "/admin/coming-soon/marketing/referrals",
+      "name": "Referral Program",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-marketing-google-business",
+      "path": "/admin/coming-soon/marketing/google-business",
+      "name": "Google Business Profile",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-analytics-highlights",
+      "path": "/admin/analytics/highlights",
+      "name": "Highlights",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-analytics-realtime",
+      "path": "/admin/analytics/realtime",
+      "name": "Real-time",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-analytics-traffic",
+      "path": "/admin/analytics/traffic",
+      "name": "Traffic",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-analytics-behavior",
+      "path": "/admin/analytics/behavior",
+      "name": "Behavior",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-analytics-marketing",
+      "path": "/admin/analytics/marketing",
+      "name": "Marketing",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-analytics-session-recordings",
+      "path": "/admin/analytics/session-recordings",
+      "name": "Session Recordings",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-analytics-insights",
+      "path": "/admin/analytics/insights",
+      "name": "Insights",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-analytics-benchmarks",
+      "path": "/admin/analytics/benchmarks",
+      "name": "Benchmarks",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-analytics-reports",
+      "path": "/admin/analytics/reports",
+      "name": "All Reports",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-sites",
+      "path": "/admin/sites",
+      "name": "Sites",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-website-texts",
+      "path": "/admin/website-texts",
+      "name": "Page Text",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-website-media",
+      "path": "/admin/website-media",
+      "name": "Media",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-homepage-offers",
+      "path": "/admin/homepage-offers",
+      "name": "Homepage Offers",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-website-content-cms",
+      "path": "/admin/website-content/cms",
+      "name": "CMS",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-website-content-multilingual",
+      "path": "/admin/website-content/multilingual",
+      "name": "Multilingual",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-site-overview",
+      "path": "/admin/coming-soon/site/overview",
+      "name": "Website Overview",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-site-website",
+      "path": "/admin/coming-soon/site/website",
+      "name": "Website",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-site-speed",
+      "path": "/admin/coming-soon/site/speed",
+      "name": "Site Speed",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-site-security",
+      "path": "/admin/coming-soon/site/security",
+      "name": "Uptime & Security",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-site-mobile-app",
+      "path": "/admin/coming-soon/site/mobile-app",
+      "name": "Mobile App",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-site-logo-brand",
+      "path": "/admin/coming-soon/site/logo-brand",
+      "name": "Logo & Brand",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-site-link-in-bio",
+      "path": "/admin/coming-soon/site/link-in-bio",
+      "name": "Link in Bio",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-store-locator",
+      "path": "/admin/store-locator",
+      "name": "Store Locator",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-settings",
+      "path": "/admin/settings",
+      "name": "Settings",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-security",
+      "path": "/admin/security",
+      "name": "Login History & IP Protection",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-policies",
+      "path": "/admin/policies",
+      "name": "Store Policies",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-legal-information",
+      "path": "/admin/legal-information",
+      "name": "Legal Information",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-getting-paid-setup",
+      "path": "/admin/coming-soon/getting-paid/setup",
+      "name": "Connect & Setup",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-getting-paid-pay-links",
+      "path": "/admin/coming-soon/getting-paid/pay-links",
+      "name": "Pay Links",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-invoices",
+      "path": "/admin/invoices",
+      "name": "Invoices",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-getting-paid-quotes",
+      "path": "/admin/coming-soon/getting-paid/quotes",
+      "name": "Price Quotes",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-getting-paid-proposals",
+      "path": "/admin/coming-soon/getting-paid/proposals",
+      "name": "Proposals",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-getting-paid-pos",
+      "path": "/admin/coming-soon/getting-paid/pos",
+      "name": "POS Checkout",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-automations",
+      "path": "/admin/automations",
+      "name": "Automations",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-developer-site-logs",
+      "path": "/admin/developer-tools/logging-tools/wix-logs",
+      "name": "Wix Logs",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-developer-advanced-log-tools",
+      "path": "/admin/developer-tools/logging-tools/advanced-log-tools",
+      "name": "Advanced Log Tools",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-developer-monitoring",
+      "path": "/admin/developer-tools/monitoring",
+      "name": "Monitoring",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-developer-secrets-manager",
+      "path": "/admin/developer-tools/secrets-manager",
+      "name": "Secrets Manager",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-developer-triggered-emails",
+      "path": "/admin/developer-tools/triggered-emails",
+      "name": "Triggered Emails",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-vlogs",
+      "path": "/admin/vlogs",
+      "name": "Videos",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-video-live-stream",
+      "path": "/admin/coming-soon/video/live-stream",
+      "name": "Live Stream",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-video-channels",
+      "path": "/admin/coming-soon/video/channels",
+      "name": "Channels",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-apps-manage",
+      "path": "/admin/coming-soon/apps/manage",
+      "name": "Manage Apps",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-apps-market",
+      "path": "/admin/coming-soon/apps/market",
+      "name": "App Market",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-ai-agents-personal-assistant",
+      "path": "/admin/coming-soon/ai-agents/personal-assistant",
+      "name": "Personal Assistant",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-ai-agents-marketing",
+      "path": "/admin/coming-soon/ai-agents/marketing",
+      "name": "Marketing Agent",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-ai-agents-design",
+      "path": "/admin/coming-soon/ai-agents/design",
+      "name": "Design Agent",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-ai-agents-front-desk",
+      "path": "/admin/coming-soon/ai-agents/front-desk",
+      "name": "Front Desk Agent",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-ai-agents-smart-chat",
+      "path": "/admin/coming-soon/ai-agents/smart-chat",
+      "name": "Smart Chat",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-site-editor",
+      "path": "/admin/site-editor",
+      "name": "Edit Site",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-website-media",
+      "path": "/admin/website-media",
+      "name": "Media",
+      "kind": "DUPLICATE_INVENTORY_ROW",
+      "from": "nav",
+      "of": "admin-website-media"
+    },
+    {
+      "pageKey": "admin-activity-log",
+      "path": "/admin/activity-log",
+      "name": "Activity Log",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-unit-creator",
+      "path": "/admin/unit-creator",
+      "name": "Unit Creator",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-upgrade",
+      "path": "/admin/coming-soon/upgrade",
+      "name": "Upgrade",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-ai",
+      "path": "/admin/coming-soon/ai",
+      "name": "AI",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-help-chat",
+      "path": "/admin/coming-soon/help/chat",
+      "name": "Support Chat",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-news-all",
+      "path": "/admin/coming-soon/news/all",
+      "name": "All Updates",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-tenant-placeholder-news-roadmap",
+      "path": "/admin/coming-soon/news/roadmap",
+      "name": "Product Roadmap",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-help-chat",
+      "path": "/admin/platform/coming-soon/help/chat",
+      "name": "Support Chat",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-news-all",
+      "path": "/admin/platform/coming-soon/news/all",
+      "name": "All Updates",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-platform-placeholder-news-roadmap",
+      "path": "/admin/platform/coming-soon/news/roadmap",
+      "name": "Product Roadmap",
+      "kind": "PLACEHOLDER_SOON",
+      "from": "nav"
+    },
+    {
+      "pageKey": "admin-login",
+      "path": "/admin/login",
+      "name": "admin-login",
+      "kind": "NON_PAGE_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-products-new",
+      "path": "/admin/products/new",
+      "name": "admin-products-new",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-products-edit",
+      "path": "/admin/products/new",
+      "name": "admin-products-edit",
+      "kind": "ROUTE_ALIAS",
+      "of": "admin-products-new",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-categories-new",
+      "path": "/admin/categories/new",
+      "name": "admin-categories-new",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-brands-new",
+      "path": "/admin/brands/new",
+      "name": "admin-brands-new",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-vlogs-new",
+      "path": "/admin/vlogs/new",
+      "name": "admin-vlogs-new",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-store-locator-new",
+      "path": "/admin/store-locator/new",
+      "name": "admin-store-locator-new",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-customers-detail",
+      "path": "/admin/customers/contact",
+      "name": "admin-customers-detail",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-staff-new",
+      "path": "/admin/staff/new",
+      "name": "admin-staff-new",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-employees",
+      "path": "/admin/staff",
+      "name": "admin-employees",
+      "kind": "ROUTE_ALIAS",
+      "of": "admin-staff",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-reports",
+      "path": "/admin/reports",
+      "name": "admin-reports",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-dropshipping",
+      "path": "/admin/dropshipping",
+      "name": "admin-dropshipping",
+      "kind": "UNIQUE_REAL_PAGE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-dropshipping-marketers",
+      "path": "/admin/dropshipping/marketers",
+      "name": "admin-dropshipping-marketers",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-dropshipping-products",
+      "path": "/admin/dropshipping/products",
+      "name": "admin-dropshipping-products",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-dropshipping-orders",
+      "path": "/admin/dropshipping/orders",
+      "name": "admin-dropshipping-orders",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-dropshipping-earnings",
+      "path": "/admin/dropshipping/earnings",
+      "name": "admin-dropshipping-earnings",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-dropshipping-withdrawals",
+      "path": "/admin/dropshipping/withdrawals",
+      "name": "admin-dropshipping-withdrawals",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-dropshipping-reports",
+      "path": "/admin/dropshipping/reports",
+      "name": "admin-dropshipping-reports",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-dropshipping-settings",
+      "path": "/admin/dropshipping/settings",
+      "name": "admin-dropshipping-settings",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-no-access",
+      "path": "/admin/no-access",
+      "name": "admin-no-access",
+      "kind": "NON_PAGE_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-getting-paid",
+      "path": "/admin/settings/getting-paid",
+      "name": "admin-settings-getting-paid",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-getting-paid-general",
+      "path": "/admin/settings/getting-paid/general",
+      "name": "admin-settings-getting-paid-general",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-getting-paid-invoices",
+      "path": "/admin/settings/getting-paid/invoices",
+      "name": "admin-settings-getting-paid-invoices",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-getting-paid-price-quotes",
+      "path": "/admin/settings/getting-paid/price-quotes",
+      "name": "admin-settings-getting-paid-price-quotes",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-getting-paid-pay-links",
+      "path": "/admin/settings/getting-paid/pay-links",
+      "name": "admin-settings-getting-paid-pay-links",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-getting-paid-automations",
+      "path": "/admin/settings/getting-paid/automations",
+      "name": "admin-settings-getting-paid-automations",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-receipts",
+      "path": "/admin/settings/receipts",
+      "name": "admin-settings-receipts",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-receipts-automations",
+      "path": "/admin/settings/receipts/automations",
+      "name": "admin-settings-receipts-automations",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-tax",
+      "path": "/admin/settings/tax",
+      "name": "admin-settings-tax",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-checkout",
+      "path": "/admin/settings/checkout",
+      "name": "admin-settings-checkout",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-checkout-emails",
+      "path": "/admin/settings/checkout/emails",
+      "name": "admin-settings-checkout-emails",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-shipping",
+      "path": "/admin/settings/shipping",
+      "name": "admin-settings-shipping",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-bookings",
+      "path": "/admin/settings/bookings",
+      "name": "admin-settings-bookings",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-bookings-default-hours",
+      "path": "/admin/settings/bookings/default-hours",
+      "name": "admin-settings-bookings-default-hours",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-bookings-add-ons",
+      "path": "/admin/settings/bookings/add-ons",
+      "name": "admin-settings-bookings-add-ons",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-bookings-staff",
+      "path": "/admin/settings/bookings/staff",
+      "name": "admin-settings-bookings-staff",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-bookings-resources",
+      "path": "/admin/settings/bookings/resources",
+      "name": "admin-settings-bookings-resources",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-bookings-notifications-sent",
+      "path": "/admin/settings/bookings/notifications-sent",
+      "name": "admin-settings-bookings-notifications-sent",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-bookings-notifications-received",
+      "path": "/admin/settings/bookings/notifications-received",
+      "name": "admin-settings-bookings-notifications-received",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-bookings-client-flow",
+      "path": "/admin/settings/bookings/client-flow",
+      "name": "admin-settings-bookings-client-flow",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-bookings-forms",
+      "path": "/admin/settings/bookings/forms",
+      "name": "admin-settings-bookings-forms",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-bookings-video-conferencing",
+      "path": "/admin/settings/bookings/video-conferencing",
+      "name": "admin-settings-bookings-video-conferencing",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    },
+    {
+      "pageKey": "admin-settings-bookings-integrations",
+      "path": "/admin/settings/bookings/integrations",
+      "name": "admin-settings-bookings-integrations",
+      "kind": "NESTED_DETAIL_ROUTE",
+      "from": "routed-only"
+    }
+  ]
+}

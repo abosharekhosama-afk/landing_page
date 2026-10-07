@@ -1,0 +1,16 @@
+﻿{
+  "measuredAt": "2026-09-20",
+  "method": "DevTools CDP on built CSS fixture under .admin-studio-shell.admin-platform",
+  "domains": {
+    "wrapOverflowX": "auto",
+    "actionsPosition": "sticky",
+    "actionsInsetInlineEnd": "0px"
+  },
+  "overview": {
+    "metricBorderRadius": "8px",
+    "metricBoxShadow": "none"
+  },
+  "rtlDir": "rtl",
+  "viewports": [1440, 1280, 390],
+  "sitesHonesty": "placeholder kept; Companies CTA only"
+}

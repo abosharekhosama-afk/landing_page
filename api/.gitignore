@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+uploads/
+.staging-uploads-mirror/
+tmp-missing-webp-*
+!src/uploads/
+!src/uploads/*.js
+src/data-store/
+live-store-export.json
+*.log

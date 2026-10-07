@@ -1,0 +1,26 @@
+{
+  "measuredAt": "2026-09-20",
+  "method": "CSS geometry formula + fixture checklist (thumb fixed 138.375px + footer 73px); live authenticated CDP = NOT_TESTED. Fixture: docs/design/evidence-2026-09-20-phase-h/fixture.html",
+  "sitesCard": {
+    "gridMinColumnPx": 246,
+    "thumbHeightPx": 138.375,
+    "footerHeightPx": 73,
+    "heightPx": 211.375,
+    "referencePx": 211.8,
+    "deltaPx": -0.425,
+    "priorApproxPx": 229,
+    "widerCardBehavior": "fixed thumb height — card height no longer grows with column width",
+    "previewPolicy": "real http(s) previewUrl from site.settings when present; otherwise initials only — no fake thumbnails"
+  },
+  "responsive": {
+    "1440": "auto-fill minmax(246px, 1fr) gap 24",
+    "1100": "minmax(220px, 1fr)",
+    "820": "page gap 20",
+    "720": "2-col gap 16",
+    "520": "1-col",
+    "390": "sites-page overflow-x hidden"
+  },
+  "enAr": "sites-page dir=ltr/rtl; status align-self:start; name/slug ellipsis",
+  "businessLogic": "unchanged — fetchSites/createSite/openEditor preserved",
+  "viewportsChecked": [1440, 1280, 820, 720, 390]
+}

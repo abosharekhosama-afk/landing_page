@@ -1,0 +1,13 @@
+﻿{
+  "measuredAt": "2026-09-20",
+  "method": "DevTools CDP on built CSS fixture under .admin-studio-shell.admin-tenant .tenant-sales-page",
+  "ordersTable": {
+    "overflowX": "auto",
+    "actionsPosition": "sticky",
+    "actionsInsetInlineEnd": "0px",
+    "clipMaxWidth": "260px"
+  },
+  "routesCovered": ["orders","delivery","invoices","sales-overview-chrome"],
+  "businessLogic": "unchanged — fidelity class/CSS only",
+  "viewports": [1440, 390]
+}

@@ -1,0 +1,42 @@
+{
+  "phase": "I",
+  "measuredAt": "2026-09-20",
+  "method": "Source + CSS fixture consistency matrix (no live authenticated CDP). Fixture checklist: docs/design/evidence-2026-09-20-phase-i/MATRIX.md. Live staging compare = NOT_TESTED without deploy approval.",
+  "gates": {
+    "legacyAdminTableInPhaseAHJsx": "PASS — zero className=admin-table / admin-table-wrap",
+    "sharedTableTokenDrift": "PASS — --dashboard-bg-card / --dashboard-text-secondary (no --admin-surface/--admin-muted)",
+    "stickyActionsLogicalRtl": "PASS — inset-inline-end + [dir=rtl] shadow flip",
+    "beVietnamProInAuthShell": "PASS — shell !important Madefor/Helvetica stack; CPanel index no Be Vietnam load",
+    "productsEnglishSharedTable": "PASS — AdminTable + ProductsList actions on admin-data-table*",
+    "employeesAllActiveDisabled": "PASS — statusFilter all/active/disabled + segmented tabs",
+    "sitesCardHeightPx": 211.375,
+    "sitesReferencePx": 211.8,
+    "sitesDeltaPx": -0.425,
+    "websiteStudioEditorUntouched": "PASS — SiteEditorPage / SiteEditorCanvas / siteEditor.js unchanged by Phase I"
+  },
+  "fixesApplied": [
+    "Migrate unused AdminEmployeeTable.jsx off legacy admin-table → admin-data-table*",
+    "Migrate Companies Manage Modules panel off legacy admin-table → admin-data-table* + clip",
+    "Shared .admin-data-table th/empty/loading/error tokens → dashboard CSS vars"
+  ],
+  "viewportsChecked": {
+    "1440": "CSS matrix — table wrap overflow-x auto; sites grid auto-fill; sticky Actions",
+    "1280_laptop": "CSS matrix — retained shell gutters / table min-width 720",
+    "820_tablet": "CSS matrix — phase F/G/H 820 gap + overflow guards present",
+    "390": "CSS matrix — table min-width 480; sites/settings/growth overflow-x hidden"
+  },
+  "enAr": {
+    "EN_LTR": "shell dir=ltr; sticky Actions inset-inline-end; Products clip 220px",
+    "AR_RTL": "shell dir=rtl + Tajawal stack; [dir=rtl] actions shadow flip; logical padding retained"
+  },
+  "tests": {
+    "regressionPhaseIPlusAH": "147 pass (node --test phase b–h + regression-phase-i + related)",
+    "buildStaging": "PASS"
+  },
+  "remainingKnownMismatches": [
+    "Live authenticated EN/AR CDP at 1440/820/390 across A–H = NOT_TESTED without staging deploy",
+    "Legacy .admin-table* CSS blocks remain in global.css (unused by A–H JSX; removal deferred)",
+    "Stream B functional gaps unchanged (Forms, PSP, Automations engine, publish API, etc.)",
+    "Sites card formula Δ −0.425px vs 211.8 (within 0.5px)"
+  ]
+}

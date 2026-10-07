@@ -1,0 +1,50 @@
+{
+  "measuredAt": "2026-09-20",
+  "method": "Source CSS rule verification against dashboard-shell.css tenant Phase G overrides (fixture-equivalent DevTools checklist); live authenticated EN/AR CDP = NOT_TESTED",
+  "viewports": [1440, 1280, 820, 390],
+  "enAr": "dir=ltr/rtl preserved on settings/activity/developer/getting-paid roots; Actions sticky uses logical inset-inline-end",
+  "businessLogic": "unchanged — fidelity class/CSS + Site Logs rename only; no fake settings persistence",
+  "routesCovered": [
+    "settings-hub",
+    "security",
+    "policies",
+    "legal-information",
+    "automations",
+    "activity-log",
+    "developer-site-logs",
+    "developer-advanced-log-tools",
+    "developer-monitoring",
+    "developer-secrets",
+    "developer-triggered-emails",
+    "getting-paid-*",
+    "tax",
+    "checkout",
+    "receipts",
+    "dropshipping-*"
+  ],
+  "securityPolicies": {
+    "adminDataTable": true,
+    "actionsSticky": true,
+    "cellClip": true
+  },
+  "developerRename": {
+    "navLabel": "Site Logs",
+    "legacyPathKept": "/admin/developer-tools/logging-tools/wix-logs"
+  },
+  "honesty": {
+    "automationsTemplates": true,
+    "settingsUnavailableRows": true,
+    "gettingPaidNotConnected": true,
+    "developerUnavailable": true
+  },
+  "cssRuleChecks": {
+    "phaseGMarker": true,
+    "settingsHubChrome": true,
+    "automationsChrome": true,
+    "activityLogChrome": true,
+    "developerLogsCard": true,
+    "dropshippingTable": true,
+    "overflow390": true
+  },
+  "legacyCssCleanup": "deferred — admin-table still referenced by platform Companies / unused AdminEmployeeTable"
+}

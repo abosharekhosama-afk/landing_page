@@ -1,0 +1,73 @@
+---
+description: Project orchestration — Cursor parent, OpenCode imkan-coder for normal implementation
+alwaysApply: true
+---
+
+# Project development workflow
+
+Authoritative full standard: `docs/CURSOR_DEVELOPMENT_OPERATING_SYSTEM.md`.
+Consult that Master Workflow when routing, completion, cost, or verification rules are needed. Do not paste it into every task prompt.
+
+## Parent and workers
+
+- **Cursor** = Parent Agent / Orchestrator.
+- Cursor handles inspection, planning, Spec Kit artifact work (spec/plan/tasks), review, git inspection, tests, verification, and orchestration.
+- **Normal implementation** = OpenCode agent `imkan-coder` only.
+- **Hard / risky implementation** follows Master Workflow routing (Codex when justified).
+- Cursor **Task** subagents are **not** a substitute for OpenCode implementation.
+- Cursor must **not** silently perform normal implementation when OpenCode is available.
+
+## OpenCode unavailable
+
+If OpenCode is unavailable for normal implementation (missing CLI, agent not registered, rate/usage/auth/model limit, or run failure that blocks work):
+
+```text
+BLOCKED
+```
+
+or, when limit-related:
+
+```text
+BLOCKED_BY_OPENCODE_LIMIT
+```
+
+Do **not** silently fall back to Cursor premium models, Composer, or other Cursor-side implementers for that same normal implementation task.
+
+## Invocation (normal implementation)
+
+Always pin the repository root with `--dir` (do not rely on the shell cwd alone):
+
+```text
+opencode run --agent imkan-coder --auto --print-logs --log-level INFO --dir "<repo-root>" -- "<scoped task>"
+```
+
+Browser / site inspection (only with explicit user consent per `.cursor/rules/no-browser-without-consent.mdc`):
+
+```text
+opencode run --agent browser-worker --auto --print-logs --log-level INFO --dir "<repo-root>" -- "<inspection task>"
+```
+
+On this machine, `<repo-root>` is the absolute path of this repository (the directory that contains `opencode.json` and `.opencode/`).
+
+Project OpenCode config and agents: `opencode.json`, `.opencode/WORKFLOW.md`, `.opencode/agents/imkan-coder.md`, `.opencode/agents/browser-worker.md`.
+
+## Spec Kit
+
+Spec Kit may create and read `spec.md`, `plan.md`, and `tasks.md`.
+Do not customize Spec Kit skills to encode worker routing; routing stays in this rule, `.opencode/WORKFLOW.md`, and the Master Workflow.
+Actual normal code implementation of Spec Kit tasks must still be delegated to `imkan-coder`.
+
+## Browser / E2E
+
+Browser automation and live E2E follow `.cursor/rules/no-browser-without-consent.mdc`. Ask first; do not open or drive a browser without explicit consent in the current conversation.
+
+## Repository authority (unchanged)
+
+These remain authoritative and are not overridden by this rule:
+
+- Repository AGENTS / constitution / specs / architecture
+- Multi-tenant isolation and server-side permissions
+- No-production / no-secrets / no unauthorized deploy or shared-environment mutation
+- Git safety (no silent commit/push; stage only intended files)
+
+Workers never commit or push; user approval is required before commit or push.

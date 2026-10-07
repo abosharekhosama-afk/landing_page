@@ -1,0 +1,14 @@
+<svg width="900" height="900" viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="900" rx="72" fill="#F5FAF4"/>
+  <circle cx="216" cy="190" r="126" fill="#DFF4E7"/>
+  <circle cx="712" cy="674" r="152" fill="#DCEFFD"/>
+  <path d="M349 222C349 192.729 372.729 169 402 169H500C529.271 169 553 192.729 553 222V298H349V222Z" fill="#16324F"/>
+  <path d="M374 122C374 107.641 385.641 96 400 96H502C516.359 96 528 107.641 528 122V177H374V122Z" fill="#58B66A"/>
+  <rect x="315" y="278" width="272" height="472" rx="56" fill="#FFFFFF" stroke="#B8DCC7" stroke-width="18"/>
+  <rect x="356" y="382" width="190" height="164" rx="30" fill="#E9F8EF"/>
+  <path d="M389 442C415 394 487 394 513 442C486 488 416 488 389 442Z" fill="#58B66A"/>
+  <circle cx="451" cy="442" r="28" fill="#2B9FDA"/>
+  <path d="M364 617H538" stroke="#16324F" stroke-width="20" stroke-linecap="round"/>
+  <path d="M392 672H510" stroke="#A6BE3A" stroke-width="20" stroke-linecap="round"/>
+  <text x="450" y="825" text-anchor="middle" fill="#16324F" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700">EP Chemical</text>
+</svg>

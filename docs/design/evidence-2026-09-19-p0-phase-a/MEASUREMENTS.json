@@ -1,0 +1,22 @@
+﻿{
+  "measuredAt": "2026-09-19",
+  "method": "DevTools getBoundingClientRect via CDP on built CSS fixture (246px Sites grid min)",
+  "sitesCard": {
+    "widthPx": 246,
+    "heightPx": 211.38,
+    "referencePx": 211.8,
+    "deltaPx": -0.43,
+    "priorApproxPx": 229,
+    "thumbHeightPx": 138.38,
+    "footerHeightPx": 73,
+    "note": "Initials placeholder only — no fake preview URL"
+  },
+  "productsTable": {
+    "wrapOverflowX": "auto",
+    "cellClipMaxWidth": "220px",
+    "actionsPosition": "sticky",
+    "actionsInsetInlineEnd": "0px",
+    "rtlActionsInsetInlineEnd": "0px"
+  },
+  "viewportsChecked": [1440, 1024, 390]
+}

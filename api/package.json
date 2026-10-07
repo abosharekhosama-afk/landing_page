@@ -1,0 +1,28 @@
+{
+  "name": "ep-chemical-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test:auth": "node --test test/auth-membership.test.js",
+    "test:catalog": "node --test test/catalog-settings.test.js",
+    "admin:create-super": "node scripts/create-super-admin.js",
+    "admin:reset-password": "node scripts/reset-admin-password.js",
+    "db:check-staging": "node scripts/check-staging-readiness.js",
+    "export:live": "node scripts/export-live-store.js",
+    "finalize:icare-staging": "node scripts/finalize-icare-staging.js",
+    "migrate:icare": "node scripts/migrate-icare-legacy.js",
+    "migrate:supabase": "node scripts/migrate-store-to-supabase.js"
+  },
+  "dependencies": {
+    "compression": "^1.8.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.22.0",
+    "sharp": "^0.34.5"
+  }
+}

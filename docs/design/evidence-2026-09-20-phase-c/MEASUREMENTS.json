@@ -1,0 +1,13 @@
+﻿{
+  "measuredAt": "2026-09-20",
+  "method": "DevTools CDP on built CSS fixture under .admin-studio-shell.admin-tenant",
+  "productsTable": {
+    "overflowX": "auto",
+    "actionsPosition": "sticky",
+    "actionsInsetInlineEnd": "0px",
+    "clipOverflow": "hidden",
+    "clipMaxWidth": "220px"
+  },
+  "routesCovered": ["products","trash","brands","categories","inventory","bundles","product-settings","coupons","automatic-discounts"],
+  "viewports": [1440, 390]
+}

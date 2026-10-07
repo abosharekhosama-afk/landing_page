@@ -1,0 +1,19 @@
+---
+description: Do not use browser automation unless the user explicitly agrees
+alwaysApply: true
+---
+
+# No browser work without explicit consent
+
+Do not perform browser-related work unless the user has explicitly agreed in the current conversation.
+
+This includes:
+
+- Opening, navigating, or controlling a browser (MCP browser tools, Playwright, Puppeteer, Selenium, etc.)
+- Taking screenshots or snapshots of pages for debugging
+- Clicking, typing, or interacting with live UI
+- Installing browser automation tooling to investigate UI issues
+
+When browser inspection would help, ask first. Describe what you would check and wait for approval.
+
+Without consent, use non-browser approaches instead: read code, run API/CLI tests, check server logs, ask the user to share console errors or screenshots.
